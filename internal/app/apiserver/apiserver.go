@@ -4,7 +4,7 @@ type APIServer struct {
 	config Config
 }
 
-func New(config *Config) *APIServer {
+func New(config Config) *APIServer {
 
 	return &APIServer{
 		config: config,

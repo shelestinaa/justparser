@@ -26,6 +26,13 @@ func Parse(buf []byte) {
 		}
 	}()
 
+	sheetMap := reportFile.GetSheetMap()
+
+	//var result []string
+	for sheetNumber, sheetTitle := range sheetMap {
+		fmt.Sprintf(sheetTitle+": %s", sheetNumber)
+
+	}
 	// Тут логика парсера, которую я не придумал
 	//todo: узнать про монго, мне кажется коллекции там не просто так, вместо таблиц
 

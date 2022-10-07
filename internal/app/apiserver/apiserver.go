@@ -81,10 +81,10 @@ func (s *APIServer) handleParse() http.HandlerFunc {
 
 		//тут забираю данные в свой буфер
 		io.Copy(&buf, file)
-		fmt.Printf("File name %s has been copied successfully\n", name[0])
+		fmt.Printf("File %s has been copied successfully\n", name[0])
 
 		//тут вызываем парселку, отдаём в неё buf
-		parser.Parse(buf.Bytes())
+		parser.Parse(buf.Bytes(), name[0])
 
 	}
 }
